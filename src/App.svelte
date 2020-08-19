@@ -42,7 +42,7 @@
       </div>
       <div class="page page__verso">
         {#each page as { name }}
-          <article class="bookmark bookmark__recto">
+          <article class="bookmark bookmark__verso">
             <section class="bookmark__face bookmark__face--verso" />
           </article>
         {/each}

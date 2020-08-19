@@ -6,9 +6,10 @@
 .page {
   width: 27.7cm;
   height: 19cm;
-  border: 1px solid black;
-  //page-break-after: always;
-  padding: 1cm;
+  //border: 1px solid black;
+  box-sizing: content-box;
+  margin: auto;
+  padding: 1cm auto;
   &__verso {
     display: none;
   }
@@ -32,6 +33,12 @@
   &:not(:last-child) {
     margin-right: 1.5cm;
   }
+  &__recto {
+    margin-top: 1cm;
+  }
+  &__verso {
+    margin-top: 3.9cm;
+  }
   &__face {
     font-family: "HarryP";
     width: 100%;
@@ -52,7 +59,6 @@
       background-image: url("assets/images/harry_potter_recto.png");
       background-color: #e3e5e5;
       z-index: 20;
-
       &:hover {
         opacity: 0;
       }
@@ -60,6 +66,8 @@
     &--verso {
       z-index: 10;
       background-image: url("assets/images/harry_potter_verso.png");
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
     }
   }
 }
